@@ -1,0 +1,52 @@
+.options-popper {
+    min-width: 223px;
+    padding: 8px 0;
+    list-style: none;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+}
+
+.options-list {
+    max-height: 590px;
+    overflow-y: auto;
+}
+
+.option-item,
+.log-out {
+    width: 100%;
+    line-height: 22px;
+    padding: 10px 16px;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    .option-icon {
+        margin-right: 8px;
+        display: flex;
+    }
+}
+
+.log-out {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.back-btn {
+    display: flex;
+    padding: 12px;
+    margin-left: 12px;
+}

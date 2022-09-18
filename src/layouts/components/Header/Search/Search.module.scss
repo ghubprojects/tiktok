@@ -1,0 +1,105 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    padding: 10.5px 14.5px;
+    border-radius: 999px;
+
+    background-color: rgba(22, 24, 35, 0.06);
+    border: 1.5px solid transparent;
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+
+    input {
+        width: 252px;
+        line-height: 2.2rem !important;
+        padding: 12px 0;
+        margin: -12px 0;
+
+        font-family: var(--font-proxima-nova);
+        font-size: 1.6rem;
+        caret-color: var(--primary);
+
+        &:placeholder-shown ~ .search-btn {
+            color: rgba(22, 24, 35, 0.34);
+        }
+    }
+
+    input.no-input {
+        width: 292px;
+    }
+}
+
+.clear-input {
+    display: flex;
+    margin: 0 12px;
+}
+
+.loading {
+    display: flex;
+    margin: 0 14px;
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(450deg);
+    }
+}
+
+.splitter {
+    width: 1px;
+    height: 28px;
+    margin: -3px 0;
+    background: rgba(22, 24, 35, 0.12);
+}
+
+.search-btn {
+    display: flex;
+    padding: 11px 16px 11px 12px;
+    margin: -12px -16px -12px 0;
+    border-radius: 0 92px 92px 0;
+    color: rgba(22, 24, 35, 0.75);
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.sug-popper {
+    width: 361px;
+    padding-top: 8px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+
+    .content-sug-item,
+    .user-sug-item {
+        padding: 9px 16px;
+        cursor: pointer;
+    }
+
+    .sug-account-title {
+        padding: 5px 12px;
+        font-size: 1.4rem;
+        color: rgba(22, 24, 35, 0.5);
+    }
+
+    .more-results {
+        padding: 15px 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:not(.sug-account-title):hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}

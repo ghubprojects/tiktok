@@ -1,0 +1,137 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700&display=swap&subset=vietnamese');
+
+//Embed Fonts
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova/Proxima-Nova-Regular.woff2') format('woff2'),
+        url('/assets/fonts/ProximaNova/Proxima-Nova-Regular.woff') format('woff'),
+        url('/assets/fonts/ProximaNova/Proxima-Nova-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova/ProximaNova-Semibold.woff2') format('woff2'),
+        url('/assets/fonts/ProximaNova/ProximaNova-Semibold.woff') format('woff'),
+        url('/assets/fonts/ProximaNova/ProximaNova-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova/Proxima-Nova-Bold.woff2') format('woff2'),
+        url('/assets/fonts/ProximaNova/Proxima-Nova-Bold.woff') format('woff'),
+        url('/assets/fonts/ProximaNova/Proxima-Nova-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/SofiaPro/sofiapro-regular.woff') format('woff'),
+        url('/assets/fonts/SofiaPro/sofiapro-regular.otf') format('opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/SofiaPro/sofiapro-medium.woff') format('woff'),
+        url('/assets/fonts/SofiaPro/sofiapro-medium.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/SofiaPro/sofiapro-semibold.otf') format('opentype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/SofiaPro/sofiapro-bold.woff2') format('woff2'),
+        url ('/assets/fonts/SofiaPro/sofiapro-bold.woff') format('woff'),
+        url('/assets/fonts/SofiaPro/sofiapro-bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+:root {
+    --primary: #fe2c55;
+    --default-layout-width: 1150px;
+    --default-layout-header-height: 60px;
+    --font-proxima-nova: ProximaNova, sans-serif;
+    --font-sofia-pro: SofiaPro, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: var(--font-proxima-nova);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow: overlay;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    user-select: none;
+}
+
+//Customize Tippy Tooltip
+.tippy-box {
+    border-radius: 8px;
+
+    .tippy-content {
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 22px;
+        background: rgba(100, 100, 100, 0.92);
+    }
+
+    .tippy-arrow {
+        position: absolute;
+        top: -8px !important;
+        left: 50%;
+        display: block;
+
+        width: 36px;
+        height: 8px;
+        margin: 0;
+
+        background-image: url('/assets/images/arrow-tooltip.svg');
+        color: transparent;
+    }
+}

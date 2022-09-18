@@ -1,0 +1,98 @@
+.container {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: var(--default-layout-header-height);
+    background: white;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: var(--default-layout-width);
+    height: 100%;
+    padding: 0 24px 0 20px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.upload {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 16px;
+
+    .plus {
+        margin-right: 8px;
+    }
+}
+
+.messages {
+    padding: 3px;
+    margin-left: 16px;
+}
+
+.inbox {
+    margin-left: 16px;
+    position: relative;
+
+    .badge {
+        position: absolute;
+        top: -20%;
+        left: 16px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 20px;
+        height: 20px;
+        padding: 2px 6px 0 6px;
+        border-radius: 999px;
+
+        color: white;
+        background: var(--primary);
+        user-select: none;
+
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+    border-radius: 999px;
+}
+
+.login {
+    justify-content: center;
+    margin-left: 16px;
+}
+
+.more {
+    margin-left: 16px;
+    padding: 0 4px;
+}
+
+.logo,
+.plus,
+.messages,
+.inbox,
+.avatar,
+.more {
+    display: flex;
+    cursor: pointer;
+}
